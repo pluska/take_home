@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+
+# build output
+/dist
+
+# environment variables
+/.env
+
+# IDE files
+.vscode
+.idea
+
+# log files
+npm-debug.log*
+
+# TypeScript configuration
+tsconfig.json
+tsconfig.tsbuildinfo
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
