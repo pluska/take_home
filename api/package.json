@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000t\u0000a\u0000k\u0000e\u0000_\u0000h\u0000o\u0000m\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/main.js",
+    "start": "tsc && node dist/main.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,6 +27,8 @@
     "@nestjs/common": "^9.4.0",
     "@nestjs/core": "^9.4.0",
     "@nestjs/platform-express": "^9.4.0",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
     "reflect-metadata": "^0.1.13"
   }
 }
