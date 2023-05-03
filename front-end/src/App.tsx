@@ -1,14 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import './App.scss';
 
 function App() {
+
+  const [commits, setCommits] = useState(null)
+
+  useEffect(() => {
+    const getCommits = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/commits');
+        const data = await response.json();
+        setCommits(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getCommits()
+  }, [])
+  console.log(commits)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          {commits ? commits[0] : ''}
         </p>
         <a
           className="App-link"
