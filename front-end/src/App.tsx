@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
+import Map from './components/Map';
 
 function App() {
 
@@ -17,23 +18,15 @@ function App() {
     };
     getCommits()
   }, [])
-  console.log(commits)
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          {commits ? commits[0] : ''}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='title'>
+        <h1>Take Home</h1>
+      </div>
+      <div className='map'>
+        <Map/>
+      </div>
+    </>
   );
 }
 
