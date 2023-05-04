@@ -14,8 +14,8 @@ function App() {
         const data = await response.json();
         const points: any = []
         data.forEach((commit:string, index:number) => {
-          const x = (index % 2 === 0) ? 17 : 80
-          const y = 15 + index * 15
+          const x = (index % 2 === 0) ? 30 : 70
+          const y = 13 + index * 12
           points.push({
             index,
             title: commit,
